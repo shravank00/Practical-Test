@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profile</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{% static 'fonts/material-icon/css/material-design-iconic-font.min.css' %}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <div class="main">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">My Details</h2>
+                          <h3><img src="{{user.profile.image.url}}" alt="Profile Image"></h3>
+                         <h3>Name : {{user.first_name}}</h3>
+                         <h3>Email : {{user.email}}</h3>
+                         <h3>Designation : {{user.profile.designation}}</h3>      
+                          <h3>Company : {{user.profile.company}}</h3> 
+                             
+                            
+                         <div class="form-group form-button">
+                            <button name="signup" id="signup" class="form-submit" value="Register"><a href="{% url 'Adddetails' %}" class="signup-image-link">Add or Update Details</a></button>
+                            <button name="signup" id="signup" class="form-submit" value="Register"><a href="{% url 'logout' %}" class="signup-image-link">Logout</a></button>
+                          </div>
+                  
+        <!-- <div class="form-group">
+            <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+            <input type="text" name="name" id="name" placeholder="Your Name"/>
+        </div>
+        <div class="form-group">
+            <label for="email"><i class="zmdi zmdi-email"></i></label>
+            <input type="email" name="email" id="email" placeholder="Your Email"/>
+        </div>
+        <div class="form-group">
+            <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+            <input type="password" name="pass" id="pass" placeholder="Password"/>
+        </div>
+        <div class="form-group">
+            <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+            <input type="password" name="pass1" id="re_pass" placeholder="Repeat your password"/>
+        </div>
+        <div class="form-group form-button">
+            <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+        </div>
+    </form>--> 
+    
+                   
+                    
+                </div>
+            </div>
+           
+        </section>
+
+       
+
+    </div>
+
+    <!-- JS -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
